@@ -50,18 +50,43 @@ public class Numbers {
          */
 
 
+        //BubbleSort
+        algo.bubbleSort(num);
+        long  bubbleSortExecutionTime= algo.executionTime;
+        System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort took: "
+                + bubbleSortExecutionTime + " milliseconds");
+        //CombSort
+        algo.bubbleSort(num);
+        long  combSortExecutionTime= algo.executionTime;
+        System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort took: "
+                + bubbleSortExecutionTime + " milliseconds");
+
+
+        //quickSort
+
+        algo.quickSort(num, 0, num.length - 1);
+     long QuickSortExecutionTime = algo.executionTime;      System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + QuickSortExecutionTime + " milli sec");
+      connectToSqlDB.insertDataFromArrayToSqlTable(num, "Quick_sort", "SortingNumbers");
+       List<String> numbers6 = connectToSqlDB.readDataBase("Quick_sort", "SortingNumbers");
+       System.out.println("Read Quick sort numbers from DataBase :");
+
+       printValue(numbers6);
+       System.out.println();
+
+       randomize(num, n);
+
+
+
         /*
         Can you come to conclusion about which sorting algorithm is most efficient, given the size of the data set?
          */
-
+//Quicksort is one of the most efficient sorting algorithm. The first thing to do is to select a pivot number, this number will separate the data, on its left are the numbers smaller than it and the greater numbers on the right.
     }
 
 
 
 
-    /*
-    HELPER METHODS
-     */
+
 
     public static void storeRandomNumbers(int[] num) {
         Random rand = new Random();

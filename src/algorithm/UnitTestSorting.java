@@ -25,6 +25,7 @@ public class UnitTestSorting {
         }
 
         // Implement Unit test for rest of the sorting algorithms below
-
+Sort.printSortedArray(unSortedArray);
+        sort.bubbleSort(sortedArray);
     }
 }

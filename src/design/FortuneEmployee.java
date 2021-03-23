@@ -15,6 +15,18 @@ public class FortuneEmployee {
      </p>
      **/
     public static void main(String[] args) {
+        EmployeeInfo estes=new EmployeeInfo();
+        estes.employeeName();
+        estes.employeeId();
+        estes.employeeSSn();
+      estes.numOfYearsWorked();
+        estes.assignDepartment(4);
+        estes.calculateSalary(40,20);
+        estes.fullTime(45);
+        estes.calculateEmployeeBonus("Average performance",estes.calculateSalary());
+       estes.calculateEmployeePension(15);
+
+
 
     }
 

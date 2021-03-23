@@ -12,7 +12,8 @@ public interface Employee {
      Please read the following methods and understand the business requirements of these following methods
         and then implement these in a concrete class.
      */
-
+    // return ssn
+   int employeeSSn();
     // employeeId() will return employee id.
     int employeeId();
 
@@ -27,5 +28,8 @@ public interface Employee {
 
     //employee benefit
     void benefitLayout();
+
+    int numOfYearsWorked();
+
 
 }
